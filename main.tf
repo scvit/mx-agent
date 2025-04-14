@@ -26,6 +26,11 @@ provider "azurerm" {
 
 }
 
+variable "sub_id" {}
+variable "tenant_id" {}
+variable "client1_id" {}
+variable "client2_id" {}
+
 data "azurerm_resource_group" "rg1" {
   provider = azurerm.managed-1
 
