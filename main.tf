@@ -44,6 +44,7 @@ output "id" {
 
 
  resource "azurerm_virtual_network" "rg2_vpc" {
+    provider = azurerm.managed-2
    name                = "mwjo-network-rg2"
    address_space       = ["10.10.0.0/16"]
    location            = data.azurerm_resource_group.rg.location
