@@ -11,7 +11,7 @@ provider "azurerm" {
  # client_id = var.client1_id
 
 }
-/*
+
 provider "azurerm" {
   features {}
 
@@ -22,10 +22,10 @@ provider "azurerm" {
   subscription_id = var.sub_id
   tenant_id = var.tenant_id
   resource_provider_registrations = "none"
-  client_id = var.client2_id
+  # client_id = var.client2_id
 
 }
-*/
+
 
 variable "sub_id" {}
 variable "tenant_id" {}
@@ -33,9 +33,9 @@ variable "client1_id" {}
 variable "client2_id" {}
 
 data "azurerm_resource_group" "rg" {
-  provider = azurerm.managed-1
+  provider = azurerm.managed-2
 
-  name = "mw-resource-group-1" # "dwwon-rg-1" 
+  name = "mw-resource-group-2" # "dwwon-rg-1" 
 }
 
 output "id" {
