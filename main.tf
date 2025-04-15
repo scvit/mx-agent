@@ -33,9 +33,9 @@ variable "client1_id" {}
 variable "client2_id" {}
 
 data "azurerm_resource_group" "rg" {
-  provider = azurerm.managed-1
+  provider = azurerm.managed-2
 
-  name = "mw-resource-group-1" # "dwwon-rg-1" 
+  name = "mw-resource-group-2" # "dwwon-rg-1" 
 }
 
 output "id" {
