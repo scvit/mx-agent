@@ -40,7 +40,7 @@ data "azurerm_resource_group" "rg" {
 
   name = "mw-resource-group-2" # "dwwon-rg-1" 
 }
-
+###
 output "id" {
   value = data.azurerm_resource_group.rg.id
 }
