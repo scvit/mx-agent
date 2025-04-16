@@ -25,6 +25,7 @@ provider "azurerm" {
   tenant_id = var.tenant_id
   resource_provider_registrations = "none"
   client_id = var.client2_id
+skip_provider_registration = true
 
 }
 
