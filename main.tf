@@ -23,7 +23,7 @@ provider "azurerm" {
   # 구독 ID 명시 (필수 아님, 환경에 따라 필요)
   subscription_id = var.sub_id
   tenant_id = var.tenant_id
-  resource_provider_registrations = "all"
+  resource_provider_registrations = "none"
   client_id = var.client2_id
   # skip_provider_registration = true
 
