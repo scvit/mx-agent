@@ -36,9 +36,9 @@ variable "client2_id" {}
 
 
 data "azurerm_resource_group" "rg" {
-   provider = azurerm.managed-2
+   provider = azurerm.managed-1
 
-  name = "mw-resource-group-2" # "dwwon-rg-1" 
+  name = "mw-resource-group-1" # "dwwon-rg-1" 
 }
 
 output "id" {
@@ -46,12 +46,12 @@ output "id" {
 }
 
 
-/*
+
  resource "azurerm_virtual_network" "rg2_vpc" {
     provider = azurerm.managed-2
    name                = "mwjo-network-rg2"
-   address_space       = ["10.10.0.0/16"]
+   address_space       = ["10.13.0.0/16"]
    location            = "Korea Central"
    resource_group_name = "mw-resource-group-2"
  }
-*/
+
