@@ -84,8 +84,24 @@ output "id" {
 
 */
 
+resource "azurerm_storage_account" "sa" {
+provider = azurerm.managed-2
+  name                     = "storermpldemo123"
+  resource_group_name      = "mw-resource-group-2"
+  location                 = "korea central"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
 
 
+
+
+
+
+
+
+
+/*
 
 ## azapi
 
@@ -107,3 +123,4 @@ data "azapi_resource" "resource_group" {
 output "resource_group_id" {
   value = data.azapi_resource.resource_group.id
 }
+*/
