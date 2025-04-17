@@ -29,6 +29,7 @@ provider "azurerm" {
 
 }
 
+/*
 provider "azurerm" {
   resource_provider_registrations = "none"
   # This is only required when the User, Service Principal, or Identity running Terraform lacks the permissions to register Azure Resource Providers.
@@ -39,7 +40,7 @@ provider "azurerm" {
   
 }
 
-
+*/
 
 
 variable "sub_id" {}
@@ -47,7 +48,7 @@ variable "tenant_id" {}
 variable "client1_id" {}
 variable "client2_id" {}
 
-/*
+
 data "azurerm_resource_group" "rg" {
    provider = azurerm.managed-2
 
@@ -57,10 +58,10 @@ data "azurerm_resource_group" "rg" {
 output "id" {
   value = data.azurerm_resource_group.rg.id
 }
-*/
 
 
 
+/*
  resource "azurerm_virtual_network" "rg2_vpc" {
     provider = azurerm.my
    name                = "mwjo-network-rg2"
@@ -69,3 +70,4 @@ output "id" {
    resource_group_name = "mw-resource-group-2"
  }
 
+*/
