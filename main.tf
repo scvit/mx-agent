@@ -79,7 +79,7 @@ output "id" {
    name                = "mwjo-network-rg2"
    address_space       = ["10.13.0.0/16"]
    location            = "Korea Central"
-   resource_group_name = "mw-resource-group-2"
+   resource_group_name = "jmw-rg-2" # jmw-rg-2 # mw-resource-group-2 
  }
 
 
