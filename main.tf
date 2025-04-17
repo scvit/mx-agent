@@ -9,7 +9,7 @@ provider "azurerm" {
   subscription_id = var.sub_id
   tenant_id = var.tenant_id
   resource_provider_registrations = "none"
-resource_providers_to_register = "none"
+# resource_providers_to_register = "none"
   # client_id = var.client1_id
 
 }
@@ -25,7 +25,7 @@ provider "azurerm" {
   subscription_id = var.sub_id
   tenant_id = var.tenant_id
   resource_provider_registrations = "none"
-  resource_providers_to_register = "none"
+  # resource_providers_to_register = "none"
   # client_id = var.client2_id
  # skip_provider_registration = true
 
