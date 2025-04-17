@@ -75,7 +75,7 @@ output "id" {
 
 
  resource "azurerm_virtual_network" "rg2_vpc" {
-    provider = azurerm.my
+    provider = azurerm.managed-2
    name                = "mwjo-network-rg2"
    address_space       = ["10.13.0.0/16"]
    location            = "Korea Central"
