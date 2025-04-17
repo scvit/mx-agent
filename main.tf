@@ -12,7 +12,7 @@ provider "azurerm" {
   # client_id = var.client1_id
 
 }
-#
+
 
 provider "azurerm" {
   features {}
