@@ -73,7 +73,7 @@ output "id" {
 
 */
 
-/*
+
  resource "azurerm_virtual_network" "rg2_vpc" {
     provider = azurerm.my
    name                = "mwjo-network-rg2"
@@ -82,7 +82,9 @@ output "id" {
    resource_group_name = "mw-resource-group-2"
  }
 
-*/
+
+
+/*
 
 resource "azurerm_storage_account" "sa" {
 provider = azurerm.managed-2
@@ -94,7 +96,7 @@ provider = azurerm.managed-2
 }
 
 
-
+*/
 
 
 
