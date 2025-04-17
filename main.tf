@@ -1,4 +1,6 @@
 
+
+
 provider "azurerm" {
   features {}
 
@@ -52,6 +54,7 @@ variable "client1_id" {}
 variable "client2_id" {}
 
 
+/*
 data "azurerm_resource_group" "rg" {
    provider = azurerm.managed-2
 
@@ -62,7 +65,7 @@ output "id" {
   value = data.azurerm_resource_group.rg.id
 }
 
-
+*/
 
 /*
  resource "azurerm_virtual_network" "rg2_vpc" {
@@ -74,3 +77,27 @@ output "id" {
  }
 
 */
+
+
+
+
+## azapi
+
+provider "azapi" {
+  use_msi = true
+  # 구독 ID 명시 (필수 아님, 환경에 따라 필요)
+  subscription_id = var.sub_id
+  tenant_id = var.tenant_id
+}
+
+# azapi data source를 사용하여 리소스 그룹 정보 가져오기
+data "azapi_resource" "resource_group" {
+  type      = "Microsoft.Resources/resourceGroups@2021-04-01"
+  name      = "mw-resource-group-2"
+  parent_id = "/subscriptions/${var.sub_id}"
+}
+
+# 출력으로 리소스 그룹 ID 표시
+output "resource_group_id" {
+  value = data.azapi_resource.resource_group.id
+}
