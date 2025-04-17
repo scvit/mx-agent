@@ -27,8 +27,19 @@ provider "azurerm" {
   # client_id = var.client2_id
  # skip_provider_registration = true
 
-
 }
+
+provider "azurerm" {
+  resource_provider_registrations = "none"
+  # This is only required when the User, Service Principal, or Identity running Terraform lacks the permissions to register Azure Resource Providers.
+  features {}
+  alias = "my"
+  subscription_id = var.sub_id
+  
+  
+}
+
+
 
 
 variable "sub_id" {}
@@ -51,7 +62,7 @@ output "id" {
 
 
  resource "azurerm_virtual_network" "rg2_vpc" {
-    provider = azurerm.managed-2
+    provider = azurerm.my
    name                = "mwjo-network-rg2"
    address_space       = ["10.13.0.0/16"]
    location            = "Korea Central"
