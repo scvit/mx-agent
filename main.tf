@@ -36,7 +36,7 @@ provider "azurerm" {
   # resource_providers_to_register = "none"
   # client_id = var.client2_id
  # skip_provider_registration = true
- # metadata_host = "10.0.2.5"
+  # metadata_host = "login.microsoftonline.com" "management.azure.com"
 
 }
 
